@@ -48,7 +48,7 @@ for index in df.index:
     value=df[df.columns[targetIndex]][index]
     #print(skill)
     #print(value)
-    if str(skill) == "nan":
+    if str(skill) == "nan" or str(skill) == "Last Update" or str(skill) == "Legende" :
         continue
     if str(value) == "nan" and not skill.startswith(" "):
         #print("yay")
