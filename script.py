@@ -78,6 +78,9 @@ print("Generating Word-table...")
 for metaTech, techs in allSkills.items():
     lastCell=None
     for tech,value in techs.items():
+        if value == 0.0:
+            # skipping skills with no experience
+            break
         row=doc.tables[0].add_row()
         row.height=Cm(0.75)
         c1=row.cells[0]
@@ -103,6 +106,7 @@ for metaTech, techs in allSkills.items():
         c2.paragraphs[0].runs[0].font.size=Pt(9)
         c2.paragraphs[0].runs[0].font.color.rgb = RGBColor(0x6B, 0x71, 0x83)
         c3=row.cells[2]
+        
         if value == 1.0:
             c3.text="Beginner"
         elif value == 2.0:
@@ -111,7 +115,6 @@ for metaTech, techs in allSkills.items():
             c3.text="Advanced"
         elif value == 4.0:
             c3.text="Expert"
-        
         c3.paragraphs[0].paragraph_format.space_before = Pt(5)
         c3.paragraphs[0].paragraph_format.space_after = Pt(0)
         c3.paragraphs[0].paragraph_format.line_spacing = 1

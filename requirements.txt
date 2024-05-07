@@ -1,0 +1,5 @@
+openpyxl
+Pyarrow
+pandas
+xlrd
+python-docx

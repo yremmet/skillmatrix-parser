@@ -3,6 +3,7 @@ This small script creates a formatted Word-table bases on a given Skillmatrix-Ex
 
 # Installation
 You need python3 and all packages which are listed at the top of the script.py.
+Or use the `requirements.txt`
 
 # Usage
 You need the Skillmatrix-Excel in the same folder as the script (Name must be "Skillmatrix.xlsx").
